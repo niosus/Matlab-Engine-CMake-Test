@@ -7,10 +7,17 @@
 
 SET(MATLAB_FOUND 0)
 IF( "$ENV{MATLAB_ROOT}" STREQUAL "" )
-    MESSAGE(ERROR "IMPORTANT!")
-    MESSAGE(STATUS "MATLAB_ROOT environment variable not set." )
-    MESSAGE(STATUS "In Linux this can be done in your user .bashrc file by appending the corresponding line, e.g:" )
-    MESSAGE(STATUS "export MATLAB_ROOT=/usr/local/MATLAB/R2012b" )
+    MESSAGE(STATUS " " )
+    MESSAGE(STATUS " " )
+    MESSAGE(STATUS " " )
+    MESSAGE(STATUS " MATLAB_ROOT environment variable not set." )
+    MESSAGE(STATUS " In Linux append the following to your .bashrc file:" )
+    MESSAGE(STATUS " >>> export MATLAB_ROOT=/usr/local/MATLAB/R2014a <<<" )
+    MESSAGE(STATUS " be sure to pick the correct version of Matlab" )
+    MESSAGE(STATUS " " )
+    MESSAGE(STATUS " " )
+    MESSAGE(STATUS " " )
+    MESSAGE(FATAL_ERROR " No matlab found. Follow the instructions above." )
 ELSE("$ENV{MATLAB_ROOT}" STREQUAL "" )
 
         FIND_PATH(MATLAB_INCLUDE_DIR mex.h
