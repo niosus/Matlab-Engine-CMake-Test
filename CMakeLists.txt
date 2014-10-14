@@ -5,9 +5,6 @@ set(CMAKE_INSTALL_PREFIX ${CMAKE_SOURCE_DIR})
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 set(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
 
-add_definitions(/DMATLAB_MEX_FILE) #define matlab macros
-add_definitions(/DMX_COMPAT_32)
-
 find_package(Matlab REQUIRED)
 
 IF(MATLAB_FOUND)
